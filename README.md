@@ -19,5 +19,5 @@ yarn start
 Or for development purposes:
 
 ```
-yarn run local
+yarn dev
 ```
