@@ -30,9 +30,17 @@ Install Postgres through [Docker Hub](https://hub.docker.com/_/postgres):
 $ docker run --name database -e POSTGRES_PASSWORD=docker -p 5432:5432 -d postgres
 ```
 
+#### Useful commands
+
+```
+$ docker ps
+$ docker ps -a
+$ docker start database
+```
+
 ### Database
 
-Make sure your database is properly configured, so run:
+Make sure your database is properly configured, then run:
 
 ```
 $ yarn sequelize db:migrate
