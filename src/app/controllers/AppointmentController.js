@@ -4,7 +4,7 @@ import pt from 'date-fns/locale/pt-BR';
 import Appointment from '../models/Appointment';
 import User from '../models/User';
 import File from '../models/File';
-import Notification from '../schemas/notification';
+import Notification from '../schemas/Notification';
 
 class AppointmentController {
   async index(req, res) {
@@ -106,7 +106,7 @@ class AppointmentController {
       {locale: pt}
     );
 
-    const ex = await Notification.create({
+    await Notification.create({
       content: `Novo agendamento de ${user.name} para o ${formattedDate}`,
       user: provider_id,
     });
