@@ -36,6 +36,12 @@ Later on, install Mongo DB:
 $ docker run --name mongobarber -p 27017:27017 -d -t mongo
 ```
 
+And least but not last:
+
+```
+$ docker run --name redisbarber -p 6379:6379 -d -t redis:alpine
+```
+
 #### Useful commands
 
 ```
