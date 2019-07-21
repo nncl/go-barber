@@ -1,11 +1,20 @@
 import {startOfDay, endOfDay, parseISO} from 'date-fns';
 import {Op} from 'sequelize';
+import * as Yup from 'yup';
 
 import User from '../models/User';
 import Appointment from '../models/Appointment';
 
 class ScheduleController {
   async index(req, res) {
+    const schema = Yup.object().shape({
+      date: Yup.date().required(),
+    });
+
+    if (!(await schema.isValid(req.query))) {
+      return res.status(422).json({error: 'Validation failed'});
+    }
+
     const checkUserProvider = await User.findOne({
       where: {id: req.userId, provider: true},
     });
