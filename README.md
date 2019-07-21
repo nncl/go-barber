@@ -47,7 +47,7 @@ $ docker run --name redisbarber -p 6379:6379 -d -t redis:alpine
 ```
 $ docker ps
 $ docker ps -a
-$ docker start database
+$ docker start <name>
 ```
 
 ### Database
