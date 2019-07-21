@@ -22,6 +22,14 @@ Or for development purposes:
 $ yarn dev
 ```
 
+#### Queue
+
+Yeah, we've got queue on our app, that's true. Sending e-mails and stuff requires that. So, as this is a separated process, you can do just:
+
+```
+$ yarn queue
+```
+
 ### Docker
 
 Install Postgres through [Docker Hub](https://hub.docker.com/_/postgres):
