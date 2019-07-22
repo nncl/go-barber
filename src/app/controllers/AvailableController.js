@@ -1,10 +1,17 @@
 import * as Yup from 'yup';
 import {Op} from 'sequelize';
-import {startOfDay, endOfDay, setSeconds, setMinutes, setHours, format, isAfter} from 'date-fns';
+import {
+  startOfDay,
+  endOfDay,
+  setSeconds,
+  setMinutes,
+  setHours,
+  format,
+  isAfter,
+} from 'date-fns';
 import Appointment from '../models/Appointment';
 
 class AvailableController {
-
   /**
    * @description
    * List available times to a user make an appointment
